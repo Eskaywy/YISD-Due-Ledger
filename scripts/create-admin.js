@@ -23,7 +23,7 @@
 require('dotenv').config();
 
 const bcrypt = require('bcryptjs');
-const { v4: uuidv4 } = require('uuid');
+const { randomUUID: uuidv4 } = require('crypto');
 
 const argv = process.argv.slice(2);
 const flag = (name) => {

@@ -1,6 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
-const { v4: uuidv4 } = require('uuid');
+const { randomUUID: uuidv4 } = require('crypto');
 const { supabase, generateSmartId, findOrCreateDepartment, findOrCreateRegion } = require('../db');
 const { authenticate, generateToken } = require('../middleware/auth');
 const { auditLog } = require('../middleware/audit');
